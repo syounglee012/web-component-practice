@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charfset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <script defer src="TodoItem.js"></script>
+
+    <script defer src="ExpandableList.js"></script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <select>
+        <option value="1">All</option>
+        <option value="2">Active</option>
+        <option value="3">Completed</option>
+    </select>
+    <todo-item checked>
+        Todo 1
+        <span slot="description">Description 1</span>
+    </todo-item>
+    <todo-item>
+        Todo 2
+        <span slot="description">Description 2</span>
+    </todo-item>
+    <todo-item>
+        Todo 3
+        <span slot="description">Description 3</span>
+    </todo-item>
+
+    <ul is="expandable-list" data-expanded>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <ul is="expandable-list" data-expanded>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </ul>
+</body>
+
+</html>
